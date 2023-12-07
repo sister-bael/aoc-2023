@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aoc"
+authors = [
+    {name = "Sister Bael", email="sisterbael@gmail.com"},
+]
+description = "elves n shit"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    'pyyaml',
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+
+[tool.setuptools.package-data]
+"aoc.inputs" = ["*.txt"]
+"tests.examples" = ["*.yml", "*.yaml"]
