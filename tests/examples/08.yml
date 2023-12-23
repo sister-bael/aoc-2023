@@ -1,0 +1,8 @@
+a:
+  - input: |
+      
+    expected: false
+b:
+  - input: |
+      
+    expected: false

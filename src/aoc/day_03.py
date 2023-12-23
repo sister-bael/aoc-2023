@@ -16,14 +16,14 @@ class Point:
 
     def is_blank(self) -> bool:
         return self.value == "."
-    
+
     def is_digit(self) -> bool:
         return self.value.isdigit()
 
     def gear_ratio(self) -> int | None:
         if not self.is_gear():
             return None
-        
+
 
 
     def is_adjacent(self, *points):
@@ -63,7 +63,7 @@ def get_numbers_and_symbols(grid = list[list[Point]]) -> tuple[list[Number], dic
     symbols = {}
     for row in grid:
         number = None
-        
+
         for point in row:
             if point.is_digit():
                 if number is None:
@@ -99,8 +99,8 @@ def part_b(input_val: str) -> int:
             continue
         total += reduce(lambda x, y: x*y, [number.val for number in adjacent])
     return total
-    
-    
+
+
 
 # testing
 

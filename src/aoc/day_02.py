@@ -16,11 +16,11 @@ class Bag(ColorCounter):
 class Round(ColorCounter):
     def is_possible(self, bag: Bag) -> bool:
         return all([asdict(bag)[color] >= count for color, count in asdict(self).items()])
-    
+
     @classmethod
     def parse(cls, round_str) -> "Round":
         return cls(**dict((color, int(count)) for count, color in [p.strip().split() for p in round_str.split(',')]))
-            
+
 
 
 Game: list[Round]
